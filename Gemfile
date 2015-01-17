@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'foundation-rails'
+gem 'foundation_rails_helper', path: '~/Projects/gems/sgruhier-foundation_rail_helper'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

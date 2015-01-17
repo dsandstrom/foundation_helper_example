@@ -4,6 +4,7 @@ class WidgetsController < ApplicationController
   # GET /widgets
   # GET /widgets.json
   def index
+    flash.now[:notice] = "Showing all widgets"
     @widgets = Widget.all
   end
 
@@ -69,6 +70,6 @@ class WidgetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def widget_params
-      params[:widget]
+      params.require(:widget).permit(:name)
     end
 end
