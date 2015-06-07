@@ -16,15 +16,19 @@
   </div>
 
   <div class="field">
-    <%= f.label :awesome do %>
-      <%= f.check_box :awesome %>
-    <% end %>
+    <%#= f.label :awesome, 'test' do %>
+      <%#= f.check_box :awesome, label: false %>
+    <%# end %>
+    <%= f.check_box :awesome, value: 'nope' %>
   </div>
 
   <div class="field">
-    <%#= f.label :floats, value: false do %>
-    <%= f.label :floats do %>
-      <%= f.radio_button :floats, false %>
+    <%= f.radio_button :floats, 'on water' %>
+    <%= f.radio_button :floats, 'on oil', class: 'special', label_options: { class: 'required' } %>
+
+    <%= f.label :floats, nil, value: 'on beer' do %>
+      <%= f.radio_button :floats, 'on beer', label: false %>
+      Label
     <% end %>
   </div>
 
